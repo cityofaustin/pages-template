@@ -1,0 +1,14 @@
+general:
+  branches:
+    only:
+      - master
+
+test:
+  override:
+    - echo "Maybe add a Markdown linter?"
+
+deployment:
+  pages:
+    branch: master
+    commands:
+      - ./.pages/deploy.sh
